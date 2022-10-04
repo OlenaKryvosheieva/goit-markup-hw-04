@@ -8,6 +8,7 @@
   --dark-background-color: #2f303a;
   --second-white-color: rgba(255, 255, 255, 0.6);
   --button-hover-color: #188ce8;
+  --hero-background-color: #c4c4c4;
 }
 
 p,
@@ -131,10 +132,9 @@ body {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
   margin-right: auto;
   margin-left: auto;
-  background-color: var(--dark-background-color);
+  background-color: var(--hero-background-color);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -170,6 +170,7 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
   padding: 10px 32px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .button:hover,
@@ -319,12 +320,12 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 
 .team-link:hover,
 .team-link:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 .team-link:hover svg,
@@ -362,7 +363,7 @@ img {
 }
 .clients-link:focus,
 .clients-link:hover {
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .clients-link:focus svg,
@@ -489,6 +490,8 @@ img {
 .portfolio-button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list {
@@ -497,10 +500,19 @@ img {
   gap: 30px;
 }
 
+.project-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .project-link {
   text-decoration: none;
   color: inherit;
-  width: calc((100%-60px) / 3);
 }
 
 .project-container {
